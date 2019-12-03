@@ -327,7 +327,7 @@ class Attachment(YouTrackObject):
         self.url = re.sub(r'^.*?(?=/_persistent)', '', self.url)
 
     def getContent(self):
-        return self.youtrack.getAttachmentContent(self.url.encode('utf-8'))
+        return self.youtrack.getAttachmentContent(self.url)
 
     def getAuthor(self):
         if self.authorLogin == '<no user>':
